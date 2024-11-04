@@ -1,12 +1,15 @@
+import { Link } from "react-router-dom"
+
 const ArticleCard = (props) => {
+   
   const { article } = props;
 
   return (
-    <>
+    <><Link to={`/articles/${article.article_id}`} article={article}>
       <div className="article-card">
         <div className="container">
-          <ul>
-            <li>Title: {article.title}</li>
+          <ul className="card-list">
+            <li><h1>Title: {article.title}</h1></li>
             <li>Author: {article.author}</li>
             <li>Topic: {article.topic}</li>
             <li>
@@ -17,6 +20,7 @@ const ArticleCard = (props) => {
           </ul>
         </div>
       </div>
+      </Link>
     </>
   );
 };

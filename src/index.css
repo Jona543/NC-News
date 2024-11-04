@@ -90,3 +90,32 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
 }
+
+.article-full {
+  overflow-y: scroll;
+  padding: 1.5em;
+  border-style: outset;
+  text-align: center;
+}
+
+.article-list {
+  display: inline-block;
+  text-align: left;
+  list-style: none;
+  font-size: larger;
+}
+
+.card-list {
+  font-size: 20px;
+  list-style: none;
+  text-align: left;
+}
+
+.card-list h1 {
+  font-size: 25px;
+  color: #1a1a1a;
+}
+
+li {
+  margin: 4px;
+}
