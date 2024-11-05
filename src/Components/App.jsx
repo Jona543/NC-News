@@ -1,11 +1,10 @@
-import { Routes, Route } from "react-router-dom"
-import Header from "./Header"
-import Home from "./Home"
-import Articles from "./Articles"
-import Article from "./Article"
+import { Routes, Route } from "react-router-dom";
+import Header from "./Header";
+import Home from "./Home";
+import Articles from "./Articles";
+import Article from "./Article";
 
 function App() {
-
   return (
     <>
       <Header />
@@ -15,7 +14,7 @@ function App() {
         <Route path="/articles/:article_id" element={<Article />} />
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
