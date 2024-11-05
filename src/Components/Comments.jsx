@@ -15,9 +15,13 @@ const Comments = (props) => {
       })
       .catch((error) => {
         setIsLoading(false);
-        return error;
+        return <p>No comments yet</p>
       });
   }, [article_id]);
+
+  if (comments.length === 0){
+    return <p>No comments yet</p>
+  }
 
   if (isLoading) {
     return <p className="loading">Loading comments...</p>;

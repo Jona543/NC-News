@@ -17,8 +17,12 @@ export const getArticle = (article_id) => {
 };
 
 export const getComments = (article_id) => {
-    return api.get(`/articles/${article_id}/comments`).then(({ data }) => {
-      console.log(data)
-        return data
-    })
-}
+  return api.get(`/articles/${article_id}/comments`).then(({ data }) => {
+    return data;
+  });
+};
+
+export const patchVotes = (article_id, inc_votes) => {
+  const incVotes = { article_id, inc_votes };
+  return api.patch(`/articles/${article_id}`, incVotes);
+};

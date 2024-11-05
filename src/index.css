@@ -150,3 +150,14 @@ li {
   text-align: right;
   color: #535bf2;
 }
+
+.votes {
+  font-size: xx-large;
+  font-weight: 1000;
+  color: red;
+}
+
+.voteButtons {
+  font-weight: bolder;
+  font-size: 40px
+}
