@@ -119,3 +119,34 @@ button:focus-visible {
 li {
   margin: 4px;
 }
+
+.loading {
+  font-size: 60px;
+  text-align: center;
+}
+
+.header {
+  font-size: 70px;
+  text-align: center;
+  
+}
+
+.comments {
+  display:flex;
+  flex-wrap: wrap;
+  font-size: large;
+  list-style: none;
+  border: 3px solid;
+  padding: 5px;
+  margin: 15px;
+}
+
+.comment-body {
+  text-align: left;
+  font-size: x-large;
+}
+
+.comment-attributes {
+  text-align: right;
+  color: #535bf2;
+}
