@@ -1,12 +1,20 @@
-import { useNavigate, Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import UserList from "./UserList";
+import { UserContext } from "../Contexts/User";
+import { useContext } from "react";
 
 const Home = () => {
-    const navigate = useNavigate()
-
-    
-    return <>
-    <Link to={"/articles"}><h2> View Articles</h2></Link>
+  const { isLoggedIn, loggedInUser } = useContext(UserContext)
+  return (
+    <>
+    <h2>Logged in as {isLoggedIn ? loggedInUser.username : "guest"}</h2>
+      <h2>Log in here:</h2>
+      <UserList/>
+      <Link to={"/articles"}>
+        <h2> View Articles</h2>
+      </Link>
     </>
-}
+  );
+};
 
-export default Home
+export default Home;

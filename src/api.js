@@ -26,3 +26,18 @@ export const patchVotes = (article_id, inc_votes) => {
   const incVotes = { article_id, inc_votes };
   return api.patch(`/articles/${article_id}`, incVotes);
 };
+
+export const postComment = (article_id, username, body) => {
+  const commentInfo = { username, body };
+  return api
+    .post(`/articles/${article_id}/comments`, commentInfo)
+    .then((data) => {
+      return data;
+    });
+};
+
+export const getUsers = () => {
+  return api.get("/users").then(({ data }) => {
+    return data;
+  });
+};
