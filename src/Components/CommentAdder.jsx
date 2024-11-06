@@ -7,23 +7,21 @@ const CommentAdder = (props) => {
   const { article_id } = useParams();
   const [comment, setComment] = useState("");
   const [newComments, setNewComments] = useState([]);
-  const { isLoggedIn, loggedInUser } = useContext(UserContext)
-  const { setLoginPrompt } = props
+  const { isLoggedIn, loggedInUser } = useContext(UserContext);
+  const { setLoginPrompt } = props;
 
   const handleSubmit = (event) => {
-    console.log(event)
-    if(isLoggedIn){
+    if (isLoggedIn) {
       const username = loggedInUser.username;
       event.preventDefault();
       setNewComments((comment) => {
-        console.log(comment)
-        return newComments
+        return newComments;
       });
       postComment(article_id, username, comment);
       setComment("");
     } else {
-      event.preventDefault()
-      setLoginPrompt("Please log in to post a comment")
+      event.preventDefault();
+      setLoginPrompt("Please log in to post a comment");
     }
   };
 

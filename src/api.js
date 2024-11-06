@@ -41,3 +41,7 @@ export const getUsers = () => {
     return data;
   });
 };
+
+export const deleteComment = (comment_id) => {
+  return api.delete(`/comments/${comment_id}`)
+}
