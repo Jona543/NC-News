@@ -7,7 +7,6 @@ const Home = () => {
   const { isLoggedIn, loggedInUser } = useContext(UserContext)
   return (
     <>
-    <h2>Logged in as {isLoggedIn ? loggedInUser.username : "guest"}</h2>
       <h2>Log in here:</h2>
       <UserList/>
       <Link to={"/articles"}>

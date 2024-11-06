@@ -8,6 +8,7 @@ const Comments = (props) => {
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [loginPrompt, setLoginPrompt] = useState("");
+  const [deletedCommentMessage, setDeletedCommentMessage] = useState("");
 
   useEffect(() => {
     getComments(article_id)
@@ -31,9 +32,18 @@ const Comments = (props) => {
         <h2>Comments: </h2>
         <p>{loginPrompt}</p>
         <CommentAdder setLoginPrompt={setLoginPrompt} />
+        <p>{deletedCommentMessage}</p>
         <ul>
           {comments.map((comment, index) => {
-            return <CommentCard key={index} comment={comment} />;
+            return (
+              <CommentCard
+                key={index}
+                comment={comment}
+                comments={comments}
+                setComments={setComments}
+                setDeletedCommentMessage={setDeletedCommentMessage}
+              />
+            );
           })}
         </ul>
       </div>

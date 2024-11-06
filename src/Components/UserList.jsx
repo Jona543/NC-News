@@ -20,9 +20,7 @@ const UserList = () => {
   return (
     <ul>
       {users.map((user) => {
-        return (
-            <SelectedUser user={user} key={user.username} />
-        );
+        return <SelectedUser user={user} key={user.username} />;
       })}
     </ul>
   );

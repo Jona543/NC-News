@@ -4,22 +4,23 @@ import ArticleCard from "./ArticleCard";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getArticles().then((articles) => {
-      setArticles(articles);
-      setIsLoading(false)
-    }).catch((error) => {
-        setIsLoading(false)
-        return error
-    });
+    getArticles()
+      .then((articles) => {
+        setArticles(articles);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        setIsLoading(false);
+        return error;
+      });
   }, []);
 
   if (isLoading) {
-    return <p className="loading">Loading Articles</p>
+    return <p className="loading">Loading Articles</p>;
   }
-
 
   return (
     <>
