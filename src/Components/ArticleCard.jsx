@@ -9,7 +9,7 @@ const ArticleCard = (props) => {
         <div className="container">
           <ul className="card-list">
             <li>
-              <Link to={`/articles/${article.article_id}`} article={article}>
+              <Link to={`/article/${article.article_id}`} article={article}>
                 <h1>{article.title}</h1>
               </Link>
             </li>
