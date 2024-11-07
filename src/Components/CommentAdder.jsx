@@ -6,24 +6,33 @@ import { UserContext } from "../Contexts/User";
 const CommentAdder = (props) => {
   const { article_id } = useParams();
   const [comment, setComment] = useState("");
-  const [newComments, setNewComments] = useState([]);
+  // const [loading, setLoading] = useState(false)
   const { isLoggedIn, loggedInUser } = useContext(UserContext);
-  const { setLoginPrompt } = props;
+  const { setLoginPrompt, comments, setComments, addComment } = props;
 
   const handleSubmit = (event) => {
+    event.preventDefault();
     if (isLoggedIn) {
       const username = loggedInUser.username;
-      event.preventDefault();
-      setNewComments((comment) => {
-        return newComments;
+
+      // setLoading(true)
+      postComment(article_id, username, comment).then((newComment) => {
+        setComments((currComments) => {
+          console.log(currComments, newComment)
+          return [...currComments, newComment.data.comment];
+        });
+        setComment("");
       });
-      postComment(article_id, username, comment);
-      setComment("");
+      // addComment(comment);
     } else {
-      event.preventDefault();
+      // event.preventDefault();
       setLoginPrompt("Please log in to post a comment");
     }
   };
+
+  // if (loading){
+  //   return <p>Posting comment</p>
+  // }
 
   return (
     <>
