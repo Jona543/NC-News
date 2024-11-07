@@ -22,6 +22,12 @@ const Comments = (props) => {
       });
   }, [article_id]);
 
+  const addComment = (commentToAdd) => {
+    setComments((currentComments) => {
+      return [commentToAdd, ...currentComments]
+    })
+  }
+
   if (isLoading) {
     return <p className="loading">Loading Comments...</p>;
   }
@@ -31,7 +37,7 @@ const Comments = (props) => {
       <div>
         <h2>Comments: </h2>
         <p>{loginPrompt}</p>
-        <CommentAdder setLoginPrompt={setLoginPrompt} />
+        <CommentAdder setLoginPrompt={setLoginPrompt} addComment={addComment} comments={comments} setComments={setComments}/>
         <p>{deletedCommentMessage}</p>
         <ul>
           {comments.map((comment, index) => {

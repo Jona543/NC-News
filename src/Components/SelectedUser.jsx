@@ -1,9 +1,7 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { UserContext } from "../Contexts/User";
 
 const SelectedUser = ({ user }) => {
-  const [LoginPrompt, setLoginPrompt] = useState("");
-
   const { setLoggedInUser } = useContext(UserContext);
 
   const handleClick = () => {
