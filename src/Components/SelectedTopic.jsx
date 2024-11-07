@@ -5,7 +5,7 @@ const SelectedTopic = (props) => {
 
   return (
     <div>
-      <Link to={"/articles/topic"} topic={topic}><h2>{topic}</h2></Link>
+      <Link to={`/articles/${topic}`} topic={topic}><h2>{topic}</h2></Link>
     </div>
   );
 };
