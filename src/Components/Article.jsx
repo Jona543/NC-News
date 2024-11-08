@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getArticle, patchVotes } from "../api";
 import Comments from "./Comments";
+import ErrorComponent from "./ErrorComponent";
 
 const Article = () => {
   const { article_id } = useParams();
@@ -10,6 +11,7 @@ const Article = () => {
   const [upvote, setUpvote] = useState(false);
   const [downvote, setDownvote] = useState(false);
   const [votesError, setVotesError] = useState(null);
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     getArticle(article_id)
@@ -19,7 +21,7 @@ const Article = () => {
       })
       .catch((error) => {
         setIsLoading(false);
-        return error;
+        setError(error)
       });
   }, [article_id]);
 
@@ -27,8 +29,8 @@ const Article = () => {
     return <p className="loading">Loading...</p>;
   }
 
-  if(article.length < 1) {
-    return <p className="loading">Article does not exist</p>
+  if(error) {
+    return <ErrorComponent message={error.response.data.message} status={error.response.status}/>
   }
 
   const handleUpVote = () => {

@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import { getArticles } from "../api";
 import ArticleCard from "./ArticleCard";
 import { useSearchParams, useParams } from "react-router-dom";
+import ErrorComponent from "./ErrorComponent";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchParams, setSearchParams] = useSearchParams()
+  const [isError, setIsError] = useState(null)
 
   const {topic} = useParams()
   const sortBy = searchParams.get("sort_by") || "created_at"
@@ -20,7 +22,7 @@ const Articles = () => {
       })
       .catch((error) => {
         setIsLoading(false);
-        return error;
+        setIsError(error)
       });
   }, [topic, sortBy, order]);
 
@@ -31,6 +33,10 @@ const Articles = () => {
 
   if (isLoading) {
     return <p className="loading">Loading Articles</p>;
+  }
+
+  if (isError){
+    return <ErrorComponent message={isError.response.data.message} status={isError.response.status}/>
   }
 
   return (
