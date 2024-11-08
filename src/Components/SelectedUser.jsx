@@ -10,7 +10,7 @@ const SelectedUser = ({ user }) => {
 
   return (
     <div>
-      <button onClick={handleClick}>Log In as {user.username}</button>
+      <button onClick={handleClick}>Sign In As {user.username}</button>
     </div>
   );
 };

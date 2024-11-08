@@ -27,6 +27,10 @@ const Article = () => {
     return <p className="loading">Loading...</p>;
   }
 
+  if(article.length < 1) {
+    return <p className="loading">Article does not exist</p>
+  }
+
   const handleUpVote = () => {
     const voteChange = upvote ? -1 : downvote ? 2 : 1;
     setUpvote(!upvote);

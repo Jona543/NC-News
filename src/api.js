@@ -4,8 +4,8 @@ const api = axios.create({
   baseURL: "https://northcoders-news-7th3.onrender.com/api",
 });
 
-export const getArticles = (topic) => {
-  return api.get("/articles", {params: {topic: topic}}).then(({ data }) => {
+export const getArticles = (topic, sort_by, order) => {
+  return api.get("/articles?query=votes", {params: {topic: topic, sort_by: sort_by, order: order}}).then(({ data }) => {
     return data;
   });
 };
