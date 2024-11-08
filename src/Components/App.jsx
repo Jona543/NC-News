@@ -3,7 +3,6 @@ import Header from "./Header";
 import Home from "./Home";
 import Articles from "./Articles";
 import Article from "./Article";
-import ArticlesByTopic from "./ArticlesByTopic"
 import { useState } from "react";
 import { UserContext } from "../Contexts/User";
 
@@ -18,7 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/article/:article_id" element={<Article />} />
-          <Route path="/articles/:topic" element={<ArticlesByTopic />} />
+          <Route path="/articles/:topic" element={<Articles />} />
         </Routes>
       </>
     </UserContext.Provider>

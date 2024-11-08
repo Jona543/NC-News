@@ -1,15 +1,16 @@
 import { UserContext } from "../Contexts/User"
 import { useContext, UseContext } from "react"
+import { Link } from "react-router-dom"
 
 const Header = () => {
 
     const { isLoggedIn, loggedInUser } = useContext(UserContext)
 
     return (<>
-        <h1 className="header">
+        <Link to={"/"}><h1 className="header">
             Northcoders News
-        </h1>
-        <h2>Logged in as {isLoggedIn ? loggedInUser.username : "guest"}</h2>
+        </h1></Link>
+        <h2>Signed in as: {isLoggedIn ? loggedInUser.username : "guest"}</h2>
         </>
     )
 }
