@@ -128,11 +128,10 @@ li {
 .header {
   font-size: 70px;
   text-align: center;
-  
 }
 
 .comments {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   font-size: large;
   list-style: none;
@@ -159,5 +158,5 @@ li {
 
 .voteButtons {
   font-weight: bolder;
-  font-size: 40px
+  font-size: 40px;
 }

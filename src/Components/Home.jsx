@@ -4,13 +4,13 @@ import TopicsList from "./TopicsList";
 
 const Home = () => {
   return (
-    <>
-      <UserList/>
+    <div>
+      <UserList />
       <Link to={"/articles"}>
         <h2> View All Articles</h2>
       </Link>
-      <TopicsList/>
-    </>
+      <TopicsList />
+    </div>
   );
 };
 

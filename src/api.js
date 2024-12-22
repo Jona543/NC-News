@@ -5,9 +5,13 @@ const api = axios.create({
 });
 
 export const getArticles = (topic, sort_by, order) => {
-  return api.get("/articles?query=votes", {params: {topic: topic, sort_by: sort_by, order: order}}).then(({ data }) => {
-    return data;
-  });
+  return api
+    .get("/articles?query=votes", {
+      params: { topic: topic, sort_by: sort_by, order: order },
+    })
+    .then(({ data }) => {
+      return data;
+    });
 };
 
 export const getArticle = (article_id) => {
@@ -38,16 +42,16 @@ export const postComment = (article_id, username, body) => {
 
 export const getUsers = () => {
   return api.get("/users").then(({ data }) => {
-    return data;
+    return data.users;
   });
 };
 
 export const deleteComment = (comment_id) => {
-  return api.delete(`/comments/${comment_id}`)
-}
+  return api.delete(`/comments/${comment_id}`);
+};
 
 export const getTopics = () => {
-  return api.get("/topics").then(({data}) => {
-    return data.rows
-  })
-}
+  return api.get("/topics").then(({ data }) => {
+    return data.rows;
+  });
+};
