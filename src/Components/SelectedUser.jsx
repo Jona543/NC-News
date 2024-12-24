@@ -10,7 +10,9 @@ const SelectedUser = ({ user }) => {
 
   return (
     <div>
-      <button onClick={handleClick}>Sign In As {user.username}</button>
+      <button onClick={handleClick} className="userButton">
+        {user.username}
+      </button>
     </div>
   );
 };

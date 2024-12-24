@@ -18,7 +18,8 @@ const UserList = () => {
   }
 
   return (
-    <ul><h2>Sign in here</h2>
+    <ul>
+      <h2>For test purposes, sign in using one of these profiles</h2>
       {users.map((user) => {
         return <SelectedUser user={user} key={user.username} />;
       })}
