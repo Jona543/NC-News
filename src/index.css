@@ -127,6 +127,9 @@ li {
 
 .header {
   font-size: 70px;
+}
+
+.headerAlignment {
   text-align: center;
 }
 

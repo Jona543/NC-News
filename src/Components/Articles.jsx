@@ -7,13 +7,13 @@ import ErrorComponent from "./ErrorComponent";
 const Articles = () => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [searchParams, setSearchParams] = useSearchParams()
-  const [isError, setIsError] = useState(null)
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [isError, setIsError] = useState(null);
 
-  const {topic} = useParams()
-  const sortBy = searchParams.get("sort_by") || "created_at"
-  const order = searchParams.get("order") || "desc"
-  
+  const { topic } = useParams();
+  const sortBy = searchParams.get("sort_by") || "created_at";
+  const order = searchParams.get("order") || "desc";
+
   useEffect(() => {
     getArticles(topic, sortBy, order)
       .then((articles) => {
@@ -22,36 +22,53 @@ const Articles = () => {
       })
       .catch((error) => {
         setIsLoading(false);
-        setIsError(error)
+        setIsError(error);
       });
   }, [topic, sortBy, order]);
 
   const handleSortChange = (event) => {
-    const [newSortBy, newOrder] = event.target.value.split(":")
-    setSearchParams({topic: topic || "", sort_by: newSortBy, order: newOrder})
-  }
+    const [newSortBy, newOrder] = event.target.value.split(":");
+    setSearchParams({
+      topic: topic || "",
+      sort_by: newSortBy,
+      order: newOrder,
+    });
+  };
 
   if (isLoading) {
     return <p className="loading">Loading Articles</p>;
   }
 
-  if (isError){
-    return <ErrorComponent message={isError.response.data.message} status={isError.response.status}/>
+  if (isError) {
+    return (
+      <ErrorComponent
+        message={isError.response.data.message}
+        status={isError.response.status}
+      />
+    );
   }
 
   return (
     <>
-      <h1>{topic && topic !== "null" ? `${topic.charAt(0).toUpperCase() + topic.slice(1)} Articles` : "All Articles"}</h1>
-      <div>
-      <label htmlFor="sort-by">Sort By: </label>
-      <select id="sort-by" onChange={handleSortChange} value={`${sortBy}:${order}`}>
-        <option value="created_at:desc">Newest</option>
-        <option value="created_at:asc">Oldest</option>
-        <option value="comment_count:desc">Most Comments</option>
-        <option value="comment_count:asc">Least Comments</option>
-        <option value="votes:desc">Most Votes</option>
-        <option value="votes:asc">Least Votes</option>
-      </select>
+      <h1 className="headerAlignment">
+        {topic && topic !== "null"
+          ? `${topic.charAt(0).toUpperCase() + topic.slice(1)} Articles`
+          : "All Articles"}
+      </h1>
+      <div className="headerAlignment">
+        <label htmlFor="sort-by">Sort By: </label>
+        <select
+          id="sort-by"
+          onChange={handleSortChange}
+          value={`${sortBy}:${order}`}
+        >
+          <option value="created_at:desc">Newest</option>
+          <option value="created_at:asc">Oldest</option>
+          <option value="comment_count:desc">Most Comments</option>
+          <option value="comment_count:asc">Least Comments</option>
+          <option value="votes:desc">Most Votes</option>
+          <option value="votes:asc">Least Votes</option>
+        </select>
       </div>
       <ul className="flex-container">
         {articles.map((article, index) => {
