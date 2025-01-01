@@ -88,6 +88,7 @@ button:focus-visible {
 
 .flex-container {
   display: flex;
+  flex-wrap: nowrap;
   flex-wrap: wrap;
 }
 
@@ -100,7 +101,7 @@ button:focus-visible {
 
 .article-list {
   display: inline-block;
-  text-align: left;
+  text-align: center;
   list-style: none;
   font-size: larger;
 }
@@ -164,7 +165,7 @@ li {
   font-size: 40px;
 }
 
-.userButton {
+.userTopicButtons {
   background-color: #04aa6d;
   border: none;
   color: white;
@@ -173,4 +174,11 @@ li {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  margin: 5px
+}
+
+.userTopicList {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
 }

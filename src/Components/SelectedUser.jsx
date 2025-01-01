@@ -10,7 +10,7 @@ const SelectedUser = ({ user }) => {
 
   return (
     <div>
-      <button onClick={handleClick} className="userButton">
+      <button onClick={handleClick} className="userTopicButtons">
         {user.username}
       </button>
     </div>

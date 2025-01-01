@@ -18,12 +18,14 @@ const UserList = () => {
   }
 
   return (
-    <ul>
-      <h2>For test purposes, sign in using one of these profiles</h2>
+    <>
+    <h2 className="headerAlignment">For test purposes, please sign in using one of these profiles</h2>
+    <ul className="userTopicList">
       {users.map((user) => {
         return <SelectedUser user={user} key={user.username} />;
       })}
     </ul>
+    </>
   );
 };
 
