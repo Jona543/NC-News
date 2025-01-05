@@ -132,6 +132,7 @@ li {
 
 .headerAlignment {
   text-align: center;
+  background-color: #be7c4d;
 }
 
 .comments {
@@ -181,4 +182,12 @@ li {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+}
+
+.topicList {
+  align-items: left;
+}
+
+.userList {
+  align-items: left;
 }
