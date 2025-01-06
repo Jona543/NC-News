@@ -19,7 +19,7 @@ const UserList = () => {
 
   return (
     <>
-      <h2 className="userList">
+      <h2 className="leftAlignment">
         For test purposes, please sign in using one of these profiles
       </h2>
       <ul className="userTopicList">

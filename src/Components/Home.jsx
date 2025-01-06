@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import UserList from "./UserList";
 import TopicsList from "./TopicsList";
-import Header from "./Header";
 
 const Home = () => {
   return (

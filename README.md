@@ -1,6 +1,6 @@
 Welcome to NC News
 
-Hosted version of site: jonas-site.netlify.app
+Hosted version of site: https://ncnews-jona543.netlify.app
 
 This project aims to display news articles to users on a easy to use, interactive interface. Users can comment and vote on articles, as well as delete their own comments. Articles can be filtered depeniding on what topic they relate to, and can also be sorted by age and number of comments or votes.
 

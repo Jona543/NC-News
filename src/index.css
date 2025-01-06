@@ -22,14 +22,6 @@ a:hover {
   color: #92140b;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -89,7 +81,7 @@ button:focus-visible {
 .flex-container {
   display: flex;
   flex-wrap: nowrap;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
 }
 
 .article-full {
@@ -117,10 +109,6 @@ button:focus-visible {
   color: #1a1a1a;
 }
 
-li {
-  margin: 4px;
-}
-
 .loading {
   font-size: 40px;
   text-align: center;
@@ -128,12 +116,12 @@ li {
 
 .header {
   font-size: 70px;
-}
-
-.headerAlignment {
+  width: 100%;
   text-align: center;
   background-color: #be7c4d;
 }
+
+
 
 .comments {
   display: flex;
@@ -183,11 +171,7 @@ li {
   flex-wrap: nowrap;
   align-items: center;
 }
-
-.topicList {
+.leftAlignment {
   align-items: left;
-}
-
-.userList {
-  align-items: left;
+  text-align: left;
 }

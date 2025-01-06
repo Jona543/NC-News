@@ -13,12 +13,14 @@ function App() {
     <UserContext.Provider value={{ loggedInUser, setLoggedInUser, isLoggedIn }}>
       <>
         <Header />
+        <section>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/article/:article_id" element={<Article />} />
           <Route path="/articles/:topic" element={<Articles />} />
         </Routes>
+        </section>
       </>
     </UserContext.Provider>
   );
