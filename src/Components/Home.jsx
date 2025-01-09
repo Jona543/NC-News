@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
-import UserList from "./UserList";
 import TopicsList from "./TopicsList";
 
 const Home = () => {
   return (
     <div>
-      <UserList />
-      <Link to={"/articles"} className="headerAlignment">
-        <h2> View All Articles</h2>
+      <Link to={"/articles"} className="viewArticles">
+        <button>View All Articles Here</button>
       </Link>
       <TopicsList />
     </div>

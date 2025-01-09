@@ -6,12 +6,16 @@ const Header = () => {
   const { isLoggedIn, loggedInUser } = useContext(UserContext);
 
   return (
-  <>
+  <div className="header">
       <Link to={"/"}>
-        <header className="header">Northcoders News</header>
+        <header className="title">Northcoders News</header>
+      </Link>
+      <Link to={"users"}>
+      <button className="profile">Log In
+      </button>
       </Link>
       <h3 className="leftAlignment">You are currently signed in as: {isLoggedIn ? loggedInUser.username : "guest"}</h3>
-      </>
+      </div>
   );
 };
 

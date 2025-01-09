@@ -5,6 +5,8 @@ import Articles from "./Articles";
 import Article from "./Article";
 import { useState } from "react";
 import { UserContext } from "../Contexts/User";
+import TopicsList from "./TopicsList";
+import UserList from "./UserList";
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState("");
@@ -19,6 +21,7 @@ function App() {
           <Route path="/articles" element={<Articles />} />
           <Route path="/article/:article_id" element={<Article />} />
           <Route path="/articles/:topic" element={<Articles />} />
+          <Route path="/users" element={<UserList />} />
         </Routes>
         </section>
       </>
