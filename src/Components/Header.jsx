@@ -7,6 +7,7 @@ const Header = () => {
 
   return (
   <div className="header">
+    <div classname="titleAlignment">
       <Link to={"/"}>
         <header className="title">Northcoders News</header>
       </Link>
@@ -14,8 +15,9 @@ const Header = () => {
       <button className="profile">Log In
       </button>
       </Link>
+    </div>
       <h3 className="leftAlignment">You are currently signed in as: {isLoggedIn ? loggedInUser.username : "guest"}</h3>
-      </div>
+  </div>
   );
 };
 

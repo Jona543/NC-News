@@ -43,10 +43,11 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #c1b4ae;
   cursor: pointer;
   transition: border-color 0.25s;
   margin-left: auto;
+  color: #c1b4ae;
 }
 button:hover {
   border-color: #92140a;
@@ -64,7 +65,7 @@ button:focus-visible {
     color: #92140a;
   }
   button {
-    background-color: #be7c4d;
+    background-color: #92140c;
   }
 }
 .article-card {
@@ -115,7 +116,7 @@ button:focus-visible {
 .header {
   width: 100%;
   text-align: left;
-  background-color: #c1b4ae;
+  background-color: white;
   padding: 10px
 }
 .title {
@@ -151,9 +152,8 @@ align-items: right;
   font-size: 40px;
 }
 .userTopicButtons {
-  background-color: #be7c4d;
   border: none;
-  color: #353238;
+  color: #c1b4ae;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -163,8 +163,9 @@ align-items: right;
 }
 .userTopicList {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
+  padding: 10px
 }
 .leftAlignment {
   align-items: left;
@@ -175,4 +176,8 @@ align-items: right;
   flex-wrap: nowrap;
   align-items: center;
   color: #353238;
+}
+.titleAlignment {
+  display: inline-block;
+  width: 100px;
 }
