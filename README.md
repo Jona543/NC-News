@@ -1,10 +1,14 @@
-Welcome to NC News
+# Welcome to NC News
 
-Hosted version of site: https://ncnews-jona543.netlify.app
+Hosted version: https://ncnews-jona543.netlify.app (please wait for page to load, it can sometimes take a minute)
+
+## Overview
 
 This project aims to display news articles to users on a easy to use, interactive interface. Users can comment and vote on articles, as well as delete their own comments. Articles can be filtered depeniding on what topic they relate to, and can also be sorted by age and number of comments or votes.
 
 This front-end architecture was built on top of this back-end: https://github.com/Jona543/be-nc-news. Please visit this repository to see how the back-end was constructed and how the front-end interacts with it.
+
+## Installation
 
 Minimum version of node.js required: v22.6.0
 
@@ -12,5 +16,7 @@ How to run project locally:
 git clone https://github.com/Jona543/nc-news.git
 cd nc-news
 code . // if using VS Code
+
+### Disclaimer
 
 This portfolio project was created as part of a Digital Skills Bootcamp in Software Engineering provided by [Northcoders](https://northcoders.com/)
