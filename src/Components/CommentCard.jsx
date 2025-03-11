@@ -27,7 +27,9 @@ const CommentCard = (props) => {
     <ul>
       <li className="comments">
         <p>{wrongUserPrompt}</p>
+        <div>
         <button onClick={handleSubmit}>Delete Comment</button>
+        </div>
         <p className="comment-body">{comment.body}</p>
         <p className="comment-attributes">{comment.author}</p>
         <p className="comment-attributes">{comment.votes} votes</p>

@@ -165,11 +165,12 @@ align-items: right;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 10px
+  padding: 10px;
 }
 .leftAlignment {
   align-items: left;
   text-align: left;
+  margin: 10px;
 }
 .viewArticles {
   display: flex;
@@ -180,4 +181,14 @@ align-items: right;
 .titleAlignment {
   display: inline-block;
   width: 100px;
+}
+.loginAlignment {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin: 0px 20px;
+}
+.articlesTitle {
+  display: flex;
+  margin: 10px;
 }

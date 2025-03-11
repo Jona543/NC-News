@@ -11,12 +11,14 @@ const Header = () => {
       <Link to={"/"}>
         <header className="title">Northcoders News</header>
       </Link>
+    </div>
+    <div className="loginAlignment">
       <Link to={"users"}>
       <button className="profile">Log In
       </button>
       </Link>
+      <h3>You are currently signed in as: {isLoggedIn ? loggedInUser.username : "guest"}</h3>
     </div>
-      <h3 className="leftAlignment">You are currently signed in as: {isLoggedIn ? loggedInUser.username : "guest"}</h3>
   </div>
   );
 };

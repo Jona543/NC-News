@@ -3,6 +3,7 @@ import { getArticles } from "../api";
 import ArticleCard from "./ArticleCard";
 import { useSearchParams, useParams } from "react-router-dom";
 import ErrorComponent from "./ErrorComponent";
+import TopicsList from "./TopicsList";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -50,12 +51,13 @@ const Articles = () => {
 
   return (
     <>
-      <h1 className="headerAlignment">
+      <h1 className="articlesTitle">
         {topic && topic !== "null"
-          ? `${topic.charAt(0).toUpperCase() + topic.slice(1)} Articles`
-          : "All Articles"}
+          ? `Viewing ${topic.charAt(0).toUpperCase() + topic.slice(1)} Articles`
+          : "Viewing All Articles"}
       </h1>
-      <div className="headerAlignment">
+      <TopicsList/>
+      <div className="articlesTitle">
         <label htmlFor="sort-by">Sort By: </label>
         <select
           id="sort-by"
