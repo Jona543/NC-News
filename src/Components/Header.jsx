@@ -18,6 +18,9 @@ const Header = () => {
       </button>
       </Link>
       <h3>You are currently signed in as: {isLoggedIn ? loggedInUser.username : "guest"}</h3>
+      <p>
+      Please log in to interact with articles
+      </p>
     </div>
   </div>
   );

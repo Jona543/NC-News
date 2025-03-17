@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getUsers } from "../api";
 import SelectedUser from "./SelectedUser";
+import { Link } from "react-router-dom";
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
@@ -27,6 +28,9 @@ const UserList = () => {
           return <SelectedUser user={user} key={user.username} />;
         })}
       </ul>
+      <Link to={"/"}>
+      <h2 className="returnToArticles">Return to articles</h2>
+      </Link>
     </>
   );
 };

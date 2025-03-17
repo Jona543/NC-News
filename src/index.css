@@ -47,7 +47,6 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   margin-left: auto;
-  color: #c1b4ae;
 }
 button:hover {
   border-color: #92140a;
@@ -107,17 +106,25 @@ button:focus-visible {
 }
 .card-list h1 {
   font-size: 25px;
-  color: #353238;
+  color: #213547;
 }
 .loading {
   font-size: 40px;
   text-align: center;
 }
 .header {
-  width: 100%;
-  text-align: left;
-  background-color: white;
-  padding: 10px
+  display: flex;
+  padding: 10px;
+}
+.titleAlignment {
+  flex: 50%;
+  width: 100px;
+}
+.loginAlignment {
+  flex: 50%;
+  text-align: right;
+  margin-right: 10px;
+  margin-top: 20px;
 }
 .title {
   font-size: 70px;
@@ -153,7 +160,6 @@ align-items: right;
 }
 .userTopicButtons {
   border: none;
-  color: #c1b4ae;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -178,17 +184,16 @@ align-items: right;
   align-items: center;
   color: #353238;
 }
-.titleAlignment {
-  display: inline-block;
-  width: 100px;
-}
-.loginAlignment {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  margin: 0px 20px;
-}
 .articlesTitle {
   display: flex;
   margin: 10px;
+}
+label {
+  padding-right: 10px;
+}
+select {
+  padding: 2px 5px;
+}
+.returnToArticles {
+  margin-left: 15px;
 }
