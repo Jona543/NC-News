@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { getArticle, patchVotes } from "../api";
 import Comments from "./Comments";
 import ErrorComponent from "./ErrorComponent";
+import { Link } from "react-router-dom";
 
 const Article = () => {
   const { article_id } = useParams();
@@ -80,6 +81,9 @@ const Article = () => {
           </li>
           <li>{article.body}</li>
           <li>Written by: {article.author}</li>
+          <Link to={"/"}>
+                <h2 className="returnToArticles">Return to articles</h2>
+                </Link>
           <li>{article.comment_count} comments</li>
         </ul>
         <Comments article_id={article.article_id} />

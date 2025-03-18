@@ -1,6 +1,6 @@
 # Welcome to NC News
 
-Hosted version: https://ncnews-jona543.netlify.app (please wait for page to load, it can sometimes take a minute)
+Hosted version: https://ncnews-jona543.netlify.app (please wait 30 - 45 seconds for page to load)
 
 ## Overview
 
