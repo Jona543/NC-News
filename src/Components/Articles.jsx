@@ -51,14 +51,14 @@ const Articles = () => {
 
   return (
     <>
-      <h1 className="articlesTitle">
+      <h1 className="viewingArticlesTitle">
         {topic && topic !== "null"
           ? `Viewing ${topic.charAt(0).toUpperCase() + topic.slice(1)} Articles`
           : "Viewing All Articles"}
       </h1>
       <TopicsList/>
-      <div className="articlesTitle">
-        <label htmlFor="sort-by">Sort By: </label>
+      <div className="sortBy">
+        <label htmlFor="sort-by">Sort Articles By: </label>
         <select
           id="sort-by"
           onChange={handleSortChange}

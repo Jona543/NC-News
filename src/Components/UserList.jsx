@@ -20,10 +20,10 @@ const UserList = () => {
 
   return (
     <>
-      <h2 className="leftAlignment">
+      <h2 className="testPurposesMessage">
         For test purposes, please sign in using one of these profiles
       </h2>
-      <ul className="userTopicList">
+      <ul className="userList">
         {users.map((user) => {
           return <SelectedUser user={user} key={user.username} />;
         })}
