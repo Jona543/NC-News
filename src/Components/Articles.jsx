@@ -72,7 +72,7 @@ const Articles = () => {
           <option value="votes:asc">Least Votes</option>
         </select>
       </div>
-      <ul className="flex-container">
+      <ul className="articles-container">
         {articles.map((article, index) => {
           return <ArticleCard key={index} article={article} />;
         })}

@@ -6,7 +6,6 @@ const ArticleCard = (props) => {
   return (
     <>
       <div className="article-card">
-        <div className="container">
           <ul className="card-list">
             <li>
               <Link to={`/article/${article.article_id}`} article={article}>
@@ -21,7 +20,6 @@ const ArticleCard = (props) => {
             <li>{article.comment_count} comments</li>
             <li>{article.votes} votes</li>
           </ul>
-        </div>
       </div>
     </>
   );
