@@ -24,8 +24,8 @@ const TopicsList = () => {
 
   return (
     <>
-      <h2 className="articlesTitle">View Articles by Topic: </h2>
-      <ul className="topicList">
+      <h2 className="articles-by-topic">View Articles by Topic: </h2>
+      <ul className="topic-list">
         {topics.map((topic) => {
           return <SelectedTopic topic={topic} key={topic.slug} />;
         })}

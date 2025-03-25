@@ -37,6 +37,9 @@ h1 {
   margin: 0;
   margin-top: 0;
 }
+select {
+  padding: 2px 5px;
+}
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -68,30 +71,42 @@ button:focus-visible {
     background-color: #92140c;
   }
 }
-.card-list {
-  font-size: 20px;
-  text-align: left;
-  list-style-type: none;
-}
-.card-list h1 {
-  font-size: 25px;
-  color: #213547;
-  margin-top: 5px;
-}
-.flex-container {
+
+/* header */
+.header {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-around;
+  padding: 10px;
+  border: #213547;
 }
-.articles-container {
-  display: grid;
-  grid-template-columns: 
-    repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-  padding: 20px;
-  max-width: 1800px;
-  margin: 0 auto;
+.titleAlignment {
+  flex: 50%;
+  width: 100px;
+  height: 100px;
 }
+.title {
+  font-size: 70px;
+  text-decoration: underline;
+  padding: 0px;
+  margin-top: 0px;
+}
+.loginAlignment {
+  flex: 50%;
+  text-align: right;
+  margin-top: 30px;
+}
+.loginAlignment p {
+  margin-block: 0px 0px;
+}
+.loginAlignment h3 {
+  margin-block: 0px 0px;
+}
+.profile {
+  align-items: right;
+  color: #92140c;
+  background-color: #c1b4ae;
+}
+
+/* article card */
 .article-card {
   padding: 10px;
   border-radius: 10px;
@@ -104,6 +119,27 @@ button:focus-visible {
 }
 .article-card ul {
   padding: 10px;
+}
+.card-list {
+  font-size: 20px;
+  text-align: left;
+  list-style-type: none;
+}
+.card-list h1 {
+  font-size: 25px;
+  color: #213547;
+  margin-top: 5px;
+}
+
+/* articles list */
+.articles-container {
+  display: grid;
+  grid-template-columns: 
+    repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  max-width: 1800px;
+  margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
   .articles-container {
@@ -123,10 +159,42 @@ button:focus-visible {
     padding: 20px;
   }
 }
+.viewing-articles-title {
+  margin: 10px;
+}
+.sort-by {
+  text-align: right;
+}
+.sort-by label {
+  padding-right: 10px;
+}
+
+/* topics */
+.articles-by-topic {
+  margin: 10px;
+  text-align: center;
+}
+.topic-list {
+  display: flex; 
+  justify-content: space-around;
+  flex-wrap: wrap; 
+  align-items: center;
+  padding: 10px;  
+}
+.topic-links {
+  flex: auto;
+  border: none;
+  padding: 0px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 5px;
+}
+
+/* full article */
 .article-full {
-  overflow-y: scroll;
   padding: 1.5em;
-  border-style: outset;
   text-align: center;
 }
 .article-list {
@@ -135,39 +203,15 @@ button:focus-visible {
   list-style: none;
   font-size: larger;
 }
-.loading {
+.voteButtons {
+  font-weight: bolder;
   font-size: 40px;
-  text-align: center;
 }
-.header {
-  display: flex;
-  padding: 10px;
+.returnToArticles {
+  margin-left: 15px;
 }
-.title {
-  font-size: 70px;
-  text-decoration: underline;
-  padding: 0px;
-  margin-top: 0px;
-}
-.titleAlignment {
-  flex: 50%;
-  width: 100px;
-  height: 100px;
-}
-.loginAlignment {
-  flex: 50%;
-  text-align: right;
-  margin-top: 30px;
-}
-.loginAlignment p {
-  margin-block: 0px 0px;
-}
-.loginAlignment h3 {
-  margin-block: 0px 0px;
-}
-.profile {
-  align-items: right;
-}
+
+/* comments */
 .comments {
   display: flex;
   flex-wrap: wrap;
@@ -185,66 +229,18 @@ button:focus-visible {
   text-align: right;
   color: #92140c;
 }
-.votes {
-  font-size: xx-large;
-  font-weight: 1000;
-  color: red;
-}
-.voteButtons {
-  font-weight: bolder;
+
+/* loading state */
+.loading {
   font-size: 40px;
-}
-.topicLinks {
-  flex: auto;
-  border: none;
-  padding: 0px 32px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  margin: 5px;
 }
-.topicList {
-  display: flex; 
-  justify-content: space-around;
-  flex-wrap: wrap; 
-  align-items: center;
-  padding: 10px;  
-}
-.leftAlignment {
+
+/* login */
+.testPurposesMessage {
   align-items: left;
   text-align: left;
   margin: 10px;
-}
-.viewArticles {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  color: #353238;
-}
-.articlesTitle {
-  margin: 10px;
-  text-align: center;
-}
-label {
-  padding-right: 10px;
-}
-select {
-  padding: 2px 5px;
-}
-.returnToArticles {
-  margin-left: 15px;
-}
-.viewingArticlesTitle {
-  margin: 10px;
-}
-.sortBy {
-  text-align: right;
-}
-.userProfile img {
-  vertical-align: middle;
-  width: 100px;
-  height: 100px;
 }
 .userList {
   display: grid;
@@ -255,7 +251,12 @@ select {
   max-width: 1800px;
   margin: 0 auto;
 }
-.userProfile {
+.user-profile img {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+}
+.user-profile {
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
@@ -267,7 +268,7 @@ select {
     grid-template-columns: 
       repeat(auto-fit, minmax(250px, 1fr));
   }
-  .userProfile {
+  .user-profile {
     padding: 30px;
   }
 }
@@ -276,26 +277,30 @@ select {
     grid-template-columns: 
       repeat(auto-fit, minmax(200px, 1fr));
   }
-  .userProfile {
+  .user-profile {
     padding: 20px;
   }
-}
-.userID {
-  font-weight: 700;
-  margin: 0px;
 }
 .user-select {
   cursor: pointer;
 }
-.userFullName {
+.user-id {
   font-weight: 700;
+  margin: 0px;
 }
-.userID:hover {
+.user-id:hover {
   text-decoration: underline;
   font-weight: 900;
 }
-.testPurposesMessage {
-  align-items: left;
-  text-align: left;
-  margin: 10px;
+.user-full-name {
+  font-weight: 700;
 }
+
+
+
+
+
+
+
+
+

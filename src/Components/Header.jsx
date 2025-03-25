@@ -35,7 +35,7 @@ const Header = () => {
     </div>
     <div className="loginAlignment">
       <Link to={"users"}>
-      <button className="profile">Log In
+      <button className="profile">Switch User
       </button>
       </Link>
       <h3>You are currently signed in as: {isLoggedIn ? loggedInUser.username : "guest"}</h3>

@@ -10,14 +10,14 @@ const SelectedUser = ({ user }) => {
   };
 
   return (
-    <div className="userProfile">
+    <div className="user-profile">
       <div onClick={handleClick} className="user-select">
       <img src={user.avatar_url}/>
-      <p className="userID">
+      <p className="user-id">
         User ID: {user.username}
       </p>
       </div>
-      <p className="userFullName">Name: {user.name}</p>
+      <p className="user-full-name">Name: {user.name}</p>
     </div>
   );
 };
