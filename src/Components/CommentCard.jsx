@@ -24,17 +24,15 @@ const CommentCard = (props) => {
   };
 
   return (
-    <ul>
-      <li className="comments">
+    <>
+      <div className="comments">
         <p>{wrongUserPrompt}</p>
-        <div>
-        <button onClick={handleSubmit}>Delete Comment</button>
-        </div>
         <p className="comment-body">{comment.body}</p>
-        <p className="comment-attributes">{comment.author}</p>
-        <p className="comment-attributes">{comment.votes} votes</p>
-      </li>
-    </ul>
+        <button onClick={handleSubmit}>Delete</button>
+        <p className="comment-author">{comment.author}</p>
+        <p className="comment-votes">{comment.votes} votes</p>
+      </div>
+    </>
   );
 };
 

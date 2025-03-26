@@ -203,31 +203,68 @@ button:focus-visible {
   list-style: none;
   font-size: larger;
 }
-.voteButtons {
+.article-list button {
   font-weight: bolder;
-  font-size: 40px;
+  font-size: 20px;
+  background-color: #c1b4ae;
 }
-.returnToArticles {
+.return-to-articles {
   margin-left: 15px;
+}
+.article-title {
+  text-align: left;
+  padding-bottom: 30px;
+}
+.article-body {
+  text-align: left;
+}
+.article-author {
+  font-weight: 700;
+  text-align: right;
+}
+.article-comments-count {
+  text-align: right;
 }
 
 /* comments */
+.comment-adder input{
+  margin-right: 10px;
+  width: 500px;
+  height: 30px;
+}
+.comment-adder button {
+  background-color: #c1b4ae;
+}
 .comments {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: large;
   list-style: none;
   border: 3px solid;
   padding: 5px;
   margin: 15px;
+  padding-top: 5px;
+}
+.comments button {
+  background-color: #c1b4ae;
+  padding: 10px;
+  margin: 10px;
+  text-align: right;
+  display: block;
 }
 .comment-body {
   text-align: left;
-  font-size: x-large;
+  font-size: large;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
 }
-.comment-attributes {
+.comment-author {
   text-align: right;
   color: #92140c;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+.comment-votes {
+  text-align: right;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
 }
 
 /* loading state */

@@ -69,22 +69,22 @@ const Article = () => {
           <li>
             <img src={article.article_img_url}></img>
           </li>
-          <button className="voteButtons" onClick={handleUpVote}>
+          <button onClick={handleUpVote}>
             +
           </button>
-          <button className="voteButtons" onClick={handleDownVote}>
+          <button onClick={handleDownVote}>
             -
           </button>
           <li>{article.votes} votes</li>
           <li>
-            <h1>{article.title}</h1>
+            <h1 className="article-title">{article.title}</h1>
           </li>
-          <li>{article.body}</li>
-          <li>Written by: {article.author}</li>
+          <li className="article-body">{article.body}</li>
+          <li className="article-author">Written by: {article.author}</li>
+          <li className="article-comments-count">{article.comment_count} comments</li>
           <Link to={"/"}>
-                <h2 className="returnToArticles">Return to articles</h2>
+                <h2 className="return-to-articles">Return to articles</h2>
                 </Link>
-          <li>{article.comment_count} comments</li>
         </ul>
         <Comments article_id={article.article_id} />
       </div>

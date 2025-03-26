@@ -36,7 +36,7 @@ const CommentAdder = (props) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="comment-adder" onSubmit={handleSubmit}>
         <input
           id="newComment"
           type="text"
